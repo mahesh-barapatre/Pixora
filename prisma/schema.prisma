@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  clerkId   String   @unique
+  email     String   @unique
+  firstName String?
+  lastName  String?
+  avatarUrl String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  credits   Int      @default(0)
+  
+  chatSessions ChatSession[]
+  transactions Transaction[]
+}
+
+model ChatSession {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String
+  user      User      @relation(fields: [userId], references: [clerkId], onDelete: Cascade)
+  messages  Message[]
+  images    ImageGeneration[]
+  createdAt DateTime  @default(now())
+  title     String
+}
+
+
+model Message {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  chatSession ChatSession @relation(fields: [chatSessionId], references: [id], onDelete: Cascade)
+  chatSessionId String
+  role        String   // "user" or "assistant"
+  content     String?  // Text content of the message (now optional)
+  imageUrl    String?  // URL of image (new optional field)
+  promt  String?
+  createdAt   DateTime @default(now())
+}
+
+model ImageGeneration {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  chatSession ChatSession @relation(fields: [chatSessionId], references: [id], onDelete: Cascade)
+  chatSessionId String
+  userId      String
+  prompt      String    // Text prompt used
+  imageUrl    String    // URL of generated image
+  creditsUsed Int
+  createdAt   DateTime  @default(now())
+}
+
+model Transaction {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String
+  user      User     @relation(fields: [userId], references: [clerkId], onDelete: Cascade)
+  type      String   
+  amount    Int
+  creds     Int
+  transactionNumber String
+  createdAt DateTime @default(now())
+}

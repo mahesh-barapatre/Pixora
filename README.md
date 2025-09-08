@@ -1,12 +1,12 @@
-# 🎨 Quotica - AI-Powered Visual Creator
+# 🎨 Pixora - AI-Powered Visual Creator
 
 > Transform your ideas into stunning visuals with cutting-edge AI technology
 
-Quotica is a powerful web application that turns your imagination into professional-quality images. Whether you're creating Studio Ghibli-style artwork, marketing materials, or artistic compositions, our platform makes it easy to generate exactly what you envision.
+Pixora is a powerful web application that turns your imagination into professional-quality images. Whether you're creating Studio Ghibli-style artwork, marketing materials, or artistic compositions, our platform makes it easy to generate exactly what you envision.
 
 ---
 
-## ✨ What Makes Quotica Special
+## ✨ What Makes Pixora Special
 
 ### 🤖 Dual AI Engines
 
@@ -90,7 +90,7 @@ Be specific and descriptive. Include:
 
 ## 💡 Perfect Use Cases
 
-| Use Case                    | Why Quotica is Perfect                                     |
+| Use Case                    | Why Pixora is Perfect                                     |
 | --------------------------- | ---------------------------------------------------------- |
 | **🎯 Marketing Campaigns**  | Create eye-catching visuals without expensive photo shoots |
 | **📱 Social Media Content** | Generate unique posts that stand out in feeds              |
@@ -188,10 +188,6 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 ---
 
 <div align="center">
-
-**Ready to bring your ideas to life?**
-
-[Start Creating →](https://quotica.fun)
 
 Made with ❤️ for creators everywhere
 

@@ -7,7 +7,7 @@ export default function ChatPage() {
 
   // If user is not logged in, redirect to sign-in page
   if (!userId) {
-    return <RedirectToSignIn />;
+    return <RedirectToSignIn redirectUrl="/chat" />;
   }
 
   return (

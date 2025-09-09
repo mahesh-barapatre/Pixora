@@ -17,6 +17,7 @@ export async function POST(req: Request) {
         { status: 400 }
       );
     }
+    console.log('first');
 
     // Enhanced validation for base64 images from mobile devices
     const processedImageUrl = imageUrl;
@@ -28,7 +29,7 @@ export async function POST(req: Request) {
         console.error('❌ No base64 data found in image URL');
         return NextResponse.json({ message: 'Invalid base64 image data' }, { status: 400 });
       }
-
+      console.log('sec');
       // Enhanced validation for base64 format
       try {
         const buffer = Buffer.from(base64Data, 'base64');
@@ -75,10 +76,12 @@ export async function POST(req: Request) {
         return NextResponse.json({ message: 'Invalid base64 encoding' }, { status: 400 });
       }
     }
-
+    console.log(process.env.NEXT_PUBLIC_IMAGEKIT_FOLDER);
     const folder = `${process.env.NEXT_PUBLIC_IMAGEKIT_FOLDER}/${sessionId}`;
+    console.log(folder, 'this is the folder');
 
     try {
+      console.log('hn upload krne ka try kr rha hu');
       const result = await imagekit.upload({
         file: processedImageUrl,
         fileName: fileName,
@@ -91,6 +94,8 @@ export async function POST(req: Request) {
         tags: ['mobile-upload', 'chat-image'], // Add tags for tracking
       });
 
+      console.log('ho gya');
+      console.log(result);
       if (!result || !result.url) {
         console.error('❌ ImageKit upload failed - no result or URL');
         return NextResponse.json(

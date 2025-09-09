@@ -79,7 +79,7 @@ export default function Header() {
               <span
                 className={`relative text-2xl ${pacifico.className} text-foreground bg-clip-text text-transparent bg-gradient-to-r from-[#003776] to-[#b143ff] dark:from-primary dark:to-blue-400`}
               >
-                Quotica
+                Pixora
               </span>
             </Link>
 

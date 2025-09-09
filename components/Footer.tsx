@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 // import { Input } from '@/components/ui/input';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { Github, MonitorIcon, Moon, Sun, Twitter } from 'lucide-react';
+import { Github, Linkedin, MonitorIcon, Moon, Sun, Twitter } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Pacifico } from 'next/font/google';
 
@@ -107,7 +107,9 @@ export default function Footer() {
                       variant="outline"
                       size="icon"
                       className="rounded-full"
-                      onClick={() => window.open('https://github.com/shvmmshr/quotica', '_blank')}
+                      onClick={() =>
+                        window.open('https://github.com/mahesh-barapatre/Pixora', '_blank')
+                      }
                     >
                       <Github className="h-4 w-4" />
                       <span className="sr-only">GitHub</span>
@@ -125,7 +127,7 @@ export default function Footer() {
                       variant="outline"
                       size="icon"
                       className="rounded-full"
-                      onClick={() => window.open('https://twitter.com/prybruhta', '_blank')}
+                      onClick={() => window.open('https://x.com/doit_mahesh', '_blank')}
                     >
                       <Twitter className="h-4 w-4" />
                       <span className="sr-only">Twitter</span>
@@ -133,6 +135,29 @@ export default function Footer() {
                   </TooltipTrigger>
                   <TooltipContent>
                     <p>Follow us on Twitter</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="rounded-full"
+                      onClick={() =>
+                        window.open(
+                          'https://www.linkedin.com/in/mahesh-barapatre-a93731225/',
+                          '_blank'
+                        )
+                      }
+                    >
+                      <Linkedin className="h-4 w-4" />
+                      <span className="sr-only">Linkedin</span>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Follow us on Linkedin</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
@@ -206,7 +231,7 @@ export default function Footer() {
         </div>
         <div className="mt-12 flex flex-col items-center justify-center gap-4 border-t pt-8 text-center md:flex-row">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Quotica. All rights reserved.
+            © {currentYear} Pixora. All rights reserved.
           </p>
           {/* <nav className="flex gap-4 text-sm">
             <Link href="/privacy" className="transition-colors hover:text-primary">

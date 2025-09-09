@@ -103,8 +103,8 @@ export default function TermsOfService() {
         <h2 className="text-2xl font-semibold mt-8 mb-4">12. Contact Information</h2>
         <p>
           If you have any questions about these Terms, please contact us at{' '}
-          <a href="mailto:support@quotica.app" className="text-primary hover:underline">
-            support@quotica.app
+          <a href="mailto:maheshbarapatre14@gmail.com" className="text-primary hover:underline">
+            maheshbarapatre14@gmail.com
           </a>
           .
         </p>

@@ -31,6 +31,8 @@ export async function POST(
       console.log('Image data:', imagefileType);
     }
 
+    console.log(process.env.GEMINI_API_KEY, 'this is the key');
+    console.log(argContents, 'content');
     const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY! });
     const geminiResponse = await ai.models.generateContent({
       model: 'gemini-2.0-flash-exp-image-generation',
@@ -40,6 +42,7 @@ export async function POST(
       },
     });
 
+    console.log('first', geminiResponse);
     if (!geminiResponse.candidates || geminiResponse.candidates.length === 0) {
       return NextResponse.json({ error: 'No response candidates from Gemini' }, { status: 500 });
     }

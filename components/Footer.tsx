@@ -43,7 +43,7 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="relative">
             <h2 className={`mb-4 text-3xl font-bold tracking-tight ${pacifico.className}`}>
-              Quotica
+              Pixora
             </h2>
             <p className="mb-6 text-muted-foreground">
               Generate beautiful AI images from your quotes. Perfect for social media,

@@ -59,6 +59,8 @@ export const CreditsProvider = ({ children }: { children: React.ReactNode }) => 
 
   const deductCredits = async (creds: number): Promise<boolean> => {
     if (!user) return false;
+    console.log('zero');
+    console.log(user.id);
     try {
       const response = await fetch('/api/credits/spendCreds', {
         method: 'POST',
@@ -66,9 +68,11 @@ export const CreditsProvider = ({ children }: { children: React.ReactNode }) => 
         body: JSON.stringify({ userId: user.id, creds }),
       });
 
+      console.log('first');
       if (!response.ok) {
         throw new Error('Failed to deduct credits');
       }
+      console.log('second');
 
       await fetchCredits();
       return true;

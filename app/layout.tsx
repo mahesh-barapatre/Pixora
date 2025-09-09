@@ -20,7 +20,7 @@ import type { Viewport } from 'next';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Quotica: AI Image Generator',
+  title: 'Pixora: AI Image Generator',
   description:
     'Create, manage, and share beautiful images instantly. Professional image generation tool for all your needs.',
   keywords: [
@@ -44,16 +44,16 @@ export const metadata: Metadata = {
     'image inspiration',
   ],
   openGraph: {
-    title: 'Quotica: Smart Image Generator and Management Tool',
+    title: 'Pixora: Smart Image Generator and Management Tool',
     description: 'Create, manage, and share beautiful images instantly.',
     url: 'https://quotica.fun',
-    siteName: 'Quotica',
+    siteName: 'Pixora',
     images: [
       {
         url: 'https://quotica.fun/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Quotica Interface Preview',
+        alt: 'Pixora Interface Preview',
       },
     ],
     locale: 'en_US',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Quotica: Smart Image Generator and Management Tool',
+    title: 'Pixora: Smart Image Generator and Management Tool',
     description: 'Create, manage, and share beautiful images instantly',
     images: ['https://quotica.fun/og-image.png'],
   },

@@ -124,7 +124,7 @@ export default function ContactUs() {
                       href="mailto:priyabrata8558@gmail.com"
                       className="text-primary hover:underline"
                     >
-                      priyabrata8558@gmail.com
+                      maheshbarapatre14@gmail.com
                     </a>
                   </p>
                   <p className="text-sm text-muted-foreground">
@@ -154,7 +154,7 @@ export default function ContactUs() {
                   <h3 className="font-medium">Support Hours</h3>
                   <p className="text-sm text-muted-foreground mt-1">
                     <a href="tel:+919153238346" className="text-primary hover:underline">
-                      +91 91532 38346
+                      +91 999-999-9999
                     </a>
                   </p>
                   <p className="text-sm text-muted-foreground">Monday - Friday: 9AM - 5PM EST</p>
